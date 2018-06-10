@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+   <!-- 将action的创建都交由spring进行管理 -->  
+  <constant name="struts.ObjectFactory" value="spring"></constant>
+  
+   <package name="my" namespace="/" extends="struts-default">
+     <action name="UserAction_*" class="userAction" method="{1}"></action>
+   
+   </package>
+</struts>
